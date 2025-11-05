@@ -26,30 +26,30 @@ const products = [
 
 export default function Products() {
   return (
-    <section id="products" className="relative py-20 bg-gradient-to-b from-white to-gray-50">
+    <section id="products" className="relative py-20 bg-gradient-to-b from-white to-gray-50 dark:from-neutral-950 dark:to-neutral-950">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl">
-          <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-gray-900">Products</h2>
-          <p className="mt-2 text-gray-700">
+          <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-gray-900 dark:text-white">Products</h2>
+          <p className="mt-2 text-gray-700 dark:text-gray-300">
             A suite of tools to handle payments, licensing, and customer experience from one place.
           </p>
         </div>
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {products.map((p) => (
-            <article key={p.name} className="group rounded-2xl border border-black/10 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
-              <div className="h-12 w-12 rounded-xl bg-gradient-to-tr from-blue-600/10 to-orange-500/10 grid place-items-center text-blue-700">
+            <article key={p.name} className="group rounded-2xl border border-black/10 dark:border-white/10 bg-white dark:bg-neutral-900 p-6 shadow-sm hover:shadow-md transition-shadow">
+              <div className="h-12 w-12 rounded-xl bg-gradient-to-tr from-blue-600/10 to-orange-500/10 grid place-items-center text-blue-700 dark:text-blue-400">
                 <p.icon className="h-6 w-6" />
               </div>
-              <h3 className="mt-4 text-lg font-semibold text-gray-900">{p.name}</h3>
-              <p className="mt-2 text-sm text-gray-700">{p.description}</p>
-              <ul className="mt-4 space-y-2 text-sm text-gray-600">
+              <h3 className="mt-4 text-lg font-semibold text-gray-900 dark:text-white">{p.name}</h3>
+              <p className="mt-2 text-sm text-gray-700 dark:text-gray-300">{p.description}</p>
+              <ul className="mt-4 space-y-2 text-sm text-gray-600 dark:text-gray-400">
                 {p.features.map((f) => (
                   <li key={f} className="flex items-center gap-2">
-                    <span className="h-1.5 w-1.5 rounded-full bg-gray-300" /> {f}
+                    <span className="h-1.5 w-1.5 rounded-full bg-gray-300 dark:bg-white/20" /> {f}
                   </li>
                 ))}
               </ul>
-              <a href="#pricing" className="mt-6 inline-flex items-center text-sm font-medium text-gray-900 hover:underline">View pricing →</a>
+              <a href="#pricing" className="mt-6 inline-flex items-center text-sm font-medium text-gray-900 dark:text-white hover:underline">View pricing →</a>
             </article>
           ))}
         </div>
